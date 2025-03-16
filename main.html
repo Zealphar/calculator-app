@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet">
+    <title>Calculator App</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <p class="logo">Calculator</p>
+            <img class="image" src="logo.png">
+        </div>
+    </header>
+    <div class="user-input">
+        <div class="row-1">
+        <div class="box-labels">
+            <p>Nickels</p>
+            <input class="boxes" type="text" id="nickels">
+        </div>
+        <div class="box-labels">
+            <p>Dimes</p>
+            <input class="boxes" type="text" id="dimes">
+        </div>
+        <div class="box-labels">
+            <p>Quarters</p>
+            <input class="boxes" type="text" id="quarters">
+        </div>
+        <div class="box-labels">
+            <p>Dollar Quarters</p>
+            <input class="boxes" type="text" id="dollar-quarters">
+        </div>
+        <div class="box-labels">
+            <p>Change:</p>
+            <input class="boxes" type="text" id="change" readonly>
+        </div>
+        </div>
+        <div class="row-2">
+        <div class="box-labels">
+            <p>$1</p>
+            <input class="boxes" type="text" id="ones">
+        </div>
+        <div class="box-labels">
+            <p>$5</p>
+            <input class="boxes" type="text" id="fives">
+        </div>
+        <div class="box-labels">
+            <p>$10</p>
+            <input class="boxes" type="text" id="tens">
+        </div>
+        <div class="box-labels">
+            <p>$20</p>
+            <input class="boxes" type="text" id="twenties">
+        </div>
+        <div class="box-labels">
+            <p>Total:</p>
+            <input class="boxes" type="text" id="total" readonly>
+        </div>
+        </div>
+        <div class="leave-in-container">
+            <div class="box-labels">
+                <p>$1: </p>
+                <input class="boxes" type="text" id="ones-to-leave" readonly>
+            </div>
+            <div class="box-labels">
+                <p>$5: </p>
+                <input class="boxes" type="text" id="fives-to-leave" readonly>
+            </div>
+            <div class="box-labels">
+                <p>$10: </p>
+                <input class="boxes" type="text" id="tens-to-leave" readonly>
+            </div>
+        </div>
+    </div>
+    <script src="script.js" defer></script>
+</body>
+</html> 

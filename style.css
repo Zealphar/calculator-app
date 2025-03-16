@@ -1,0 +1,99 @@
+body {
+    padding-top: 80px;
+    background-color: #fafafa;
+}
+header{
+    position: fixed;    
+    display: flex;
+    top: 0;
+    left: 0;
+    background-color: #393838;
+    color: rgb(226, 223, 223);
+    width: 100%;
+    height: 80px;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    margin: 0 auto;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+
+.logo {
+    font-family: "PT Sans Narrow", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 50px;
+}
+
+.image {
+    width: 200px;   
+}
+
+.boxes {
+    background-color: rgb(229, 229, 229);
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    margin-top: -15px;
+}
+
+.user-input {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 0fr);
+    margin: 0;
+    gap: 10px;
+}
+
+@media(max-width: 412px) {
+    .user-input {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+}
+
+.user-input p {
+    font-size: 23px;
+}
+
+.box-labels {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: middle;
+}
+
+#change, #total {
+    color: rgb(195, 2, 2);
+  }
+
+.leave-in-container {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+}
+
+.leave-in-container p {
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.leave-in-container .box-labels .boxes {
+    color: rgb(195, 2, 2);
+}
