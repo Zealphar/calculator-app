@@ -119,3 +119,46 @@ header p {
 .leave-in-container .box-labels .boxes {
     color: #e74c3c;
 }
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    margin: 15px auto;
+    padding: 15px;
+}
+.form p {
+    color: #f1f1f1;
+    display: inline-block;
+}
+
+.form input, #submit {
+    border: 1px solid #3c3e44;
+    background-color: #2a2b30;
+    padding: 10px 15px;
+    outline: none;
+    color: #f1f1f1;
+    display: block;
+    margin: 20px auto;
+}
+
+#msg {
+    color: #61b752;
+    display: block;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
+@media screen and (max-width: 414px) {
+    .form input, #submit, .form span {
+        font-size: 1.3em;
+    }
+    .form p {
+        font-size: 1.3em;
+    }
+    #msg {
+        padding: 30px;
+    }
+  }
