@@ -19,19 +19,19 @@
         <div class="row-1">
         <div class="box-labels">
             <p>Nickels</p>
-            <input class="boxes" type="text" id="nickels">
+            <input class="boxes" type="number" id="nickels">
         </div>
         <div class="box-labels">
             <p>Dimes</p>
-            <input class="boxes" type="text" id="dimes">
+            <input class="boxes" type="number" id="dimes">
         </div>
         <div class="box-labels">
             <p>Quarters</p>
-            <input class="boxes" type="text" id="quarters">
+            <input class="boxes" type="number" id="quarters">
         </div>
         <div class="box-labels">
             <p>Dollar Quarters</p>
-            <input class="boxes" type="text" id="dollar-quarters">
+            <input class="boxes" type="number" id="dollar-quarters">
         </div>
         <div class="box-labels">
             <p>Change:</p>
@@ -41,19 +41,19 @@
         <div class="row-2">
         <div class="box-labels">
             <p>$1</p>
-            <input class="boxes" type="text" id="ones">
+            <input class="boxes" type="number" id="ones">
         </div>
         <div class="box-labels">
             <p>$5</p>
-            <input class="boxes" type="text" id="fives">
+            <input class="boxes" type="number" id="fives">
         </div>
         <div class="box-labels">
             <p>$10</p>
-            <input class="boxes" type="text" id="tens">
+            <input class="boxes" type="number" id="tens">
         </div>
         <div class="box-labels">
             <p>$20</p>
-            <input class="boxes" type="text" id="twenties">
+            <input class="boxes" type="number" id="twenties">
         </div>
         <div class="box-labels">
             <p>Total:</p>
@@ -75,6 +75,39 @@
             </div>
         </div>
     </div>
+    <section class="form">
+        <div class="row">
+            <div class="col-1"></div>
+        <p>Please enter your initials and the number of drinks on the sealer.</p>
+            </div>
+            <div class="col-2">
+        <form name="submit-to-google-sheet">
+            <input type="text" name="Initials" placeholder="Initials of closer" required>
+            <input type="number" name="Drinks" placeholder="# of drinks" required>
+            <button type="submit" id="submit">Submit</button>
+        </form>
+        </div>
+        <span id="msg"></span>
+    </div>
+    </section>
     <script src="script.js" defer></script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyflNtFMPPvWtppkPjhyV5JFXoD-WN9QFS8p-OW5v4ictlo1QPu-Twtty4hRlGTKVPXBg/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg");
+    
+        form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Information sent!"
+                setTimeout(function() {
+                    msg.innerHTML = ""
+                },5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
 </body>
 </html> 
