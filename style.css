@@ -1,7 +1,9 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
 body {
     padding-top: 80px;
     background-color: #1e1f24;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 header{
@@ -32,7 +34,7 @@ header p {
     margin: 0 auto;
     align-items: center;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     gap: 40px;
 }
 
@@ -42,6 +44,13 @@ header p {
     font-weight: 700;
     font-style: normal;
     font-size: 50px;
+}
+
+.main-content-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 0 10px;
 }
 
 .boxes {
@@ -61,34 +70,26 @@ header p {
     z-index: 1;
 }
 
-.boxes:hover, .user-input:hover {
+.boxes:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 12px rgba(0,0,0,0.4);
 }
 
-.user-input {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 0fr);
-    margin: 0;
-    gap: 10px;
-}
-
 @media(max-width: 600px) {
-    .user-input {
+    .main-content-grid {
         grid-template-columns: repeat(2, 1fr);
 
     }
 }
 
 @media(max-width: 430px) {
-    .user-input {
-        grid-template-columns: repeat(1, 1fr);
+    .main-content-grid {
+        grid-template-columns: 1fr;
 
     }
 }
 
-.user-input p, .boxes {
+.box-labels p {
     font-size: 23px;
     color: #f1f1f1;
 }
@@ -120,45 +121,61 @@ header p {
     color: #e74c3c;
 }
 
-.form {
+.form-layout {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
     align-items: center;
-    text-align: center;
-    margin: 15px auto;
-    padding: 15px;
-}
-.form p {
-    color: #f1f1f1;
-    display: inline-block;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 300px;
 }
 
-.form input, #submit {
+.form-layout label {
+    color: #f1f1f1;
+    margin-bottom: 5px;
+    font-size: 1.1em;
+    align-self: flex-start; 
+    width: 100%;
+}
+
+.form-layout input, .form-layout textarea, #submit {
     border: 1px solid #3c3e44;
     background-color: #2a2b30;
     padding: 10px 15px;
     outline: none;
     color: #f1f1f1;
-    display: block;
-    margin: 20px auto;
+    margin-bottom: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+.form-layout textarea {
+    resize: vertical;
+    min-height: 60px;
+}
+
+#submit {
+    cursor: pointer;
 }
 
 #msg {
     color: #61b752;
     display: block;
-    padding-top: 5px;
-    padding-bottom: 10px;
+    padding-top: -30px;
+    margin-top: -15px;
+    margin-bottom: 30px;
+    text-align: center;
 }
 
 @media screen and (max-width: 414px) {
-    .form input, #submit, .form span {
-        font-size: 1.3em;
+    .form-layout label {
+        font-size: 1em;
     }
-    .form p {
-        font-size: 1.3em;
+    .form-layout input, .form-layout textarea, #submit, .form-layout span {
+        font-size: 1em;
     }
     #msg {
-        padding: 30px;
+        padding: 20px;
     }
-  }
+}
