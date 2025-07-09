@@ -12,6 +12,9 @@ const onesToLeave = document.getElementById("ones-to-leave");
 const fivesToLeave = document.getElementById("fives-to-leave");
 const tensToLeave = document.getElementById("tens-to-leave");
 const twentiesToLeave = document.getElementById("twenties-to-leave");
+const actual = document.getElementById("actual");
+const expected = document.getElementById("expected");
+const variance = document.getElementById("variance");
 
 function updateChange() {
   const nickels = parseFloat(num1Input.value) || 0;
@@ -42,8 +45,7 @@ function updateFinalTotal() {
   onesToLeave.value = leaveOnes[0];
   fivesToLeave.value = leaveOnes[1];
   tensToLeave.value = leaveOnes[2];
-
-
+  variance.value = (actual.value - expected.value).toFixed(2);
 }
 
 function updateBillsToLeave() {
@@ -100,5 +102,5 @@ num5Input.addEventListener("input", updateFinalTotal);
 num6Input.addEventListener("input", updateFinalTotal);
 num7Input.addEventListener("input", updateFinalTotal);
 num8Input.addEventListener("input", updateFinalTotal);
-
-
+actual.addEventListener("input", updateFinalTotal);
+expected.addEventListener("input", updateFinalTotal);
