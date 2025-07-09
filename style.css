@@ -167,6 +167,9 @@ header p {
     margin-bottom: 30px;
     text-align: center;
 }
+.to-leave input {
+    color: #e74c3c;
+}
 
 @media screen and (max-width: 414px) {
     .form-layout label {
