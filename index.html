@@ -65,7 +65,7 @@
                 </div>
             </div>
 
-            <div>
+            <div class="to-leave">
                 <div class="box-labels">
                     <p>$1: </p>
                     <input class="boxes" type="text" id="ones-to-leave" readonly>
@@ -83,10 +83,10 @@
 
         <section class="form-layout">
             <label for="initials">Initials of closer</label>
-            <input type="text" name="Initials" id="initials" placeholder="Initials of closer" required>
+            <input type="text" name="Initials" id="initials" required>
 
             <label for="drinks"># of drinks</label>
-            <input type="number" name="Drinks" id="drinks" placeholder="# of drinks" required>
+            <input type="number" name="Drinks" id="drinks" required>
 
             <label for="expected">Expected: $</label>
             <input type="number" name="Expected" id="expected" step="0.01" required>
@@ -95,7 +95,7 @@
             <input type="number" name="Actual" id="actual" step="0.01">
 
             <label for="variance">Variance: (+/-) $</label>
-            <input type="number" name="Variance" id="variance" step="0.01">
+            <input type="number" name="Variance" id="variance" step="0.01" readonly>
 
             <label for="comments">Additional Comments</label>
             <textarea name="Comments" id="comments" rows="3"></textarea>
