@@ -144,6 +144,7 @@ header p {
     padding: 10px 15px;
     outline: none;
     color: #f1f1f1;
+    margin-top: 5px;
     margin-bottom: 15px;
     width: 100%;
     box-sizing: border-box;
@@ -181,4 +182,8 @@ header p {
     #msg {
         padding: 20px;
     }
+}
+
+#actual, #variance, .hidden {
+    display: none;
 }
