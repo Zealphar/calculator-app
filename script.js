@@ -45,6 +45,7 @@ function updateFinalTotal() {
   onesToLeave.value = leaveOnes[0];
   fivesToLeave.value = leaveOnes[1];
   tensToLeave.value = leaveOnes[2];
+  actual.value = finalTotal;
   variance.value = (actual.value - expected.value).toFixed(2);
 }
 
