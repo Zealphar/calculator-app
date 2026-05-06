@@ -3,126 +3,175 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet">
-    <title>Calculator App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <title>Boba Time Calculator 2.0</title>
 </head>
 <body>
     <header>
-        <div class="container">
-            <p class="logo">Calculator</p>
+        <div class="img-wrapper">
+            <img src="bbt.png">
         </div>
+        <h1>Calculator 2.0</h1>
     </header>
 
-    <form name="submit-to-google-sheet">
-        <div class="main-content-grid">
+    <div class="screen-container">
+        <div class="glass-container">
+            <div class="form-wrapper">
+                <form name="submit-to-google-sheet" id="main-form">
+                    
+                    <div class="grid-container">
+                        <div class="box-labels">
+                            <p>Quarters</p>
+                            <input class="boxes" type="number" id="quarters" name="Quarters">
+                        </div>
+                        <div class="box-labels">
+                            <p>Dimes</p>
+                            <input class="boxes" type="number" id="dimes" name="Dimes">
+                        </div>
+                        <div class="box-labels">
+                            <p>Nickels</p>
+                            <input class="boxes" type="number" id="nickels" name="Nickels">
+                        </div>
+                        <div class="box-labels">
+                            <p>Dollar Quarters</p>
+                            <input class="boxes" type="number" id="dollar-quarters" name="Dollar_Quarters">
+                        </div>
+                        <div class="box-labels">
+                            <p>Change:</p>
+                            <input class="boxes" type="text" id="change" name="Change" readonly>
+                        </div>
+
+                        <div class="box-labels">
+                            <p>$1</p>
+                            <input class="boxes" type="number" id="ones" name="Ones">
+                        </div>
+                        <div class="box-labels">
+                            <p>$5</p>
+                            <input class="boxes" type="number" id="fives" name="Fives">
+                        </div>
+                        <div class="box-labels">
+                            <p>$10</p>
+                            <input class="boxes" type="number" id="tens" name="Tens">
+                        </div>
+                        <div class="box-labels">
+                            <p>$20</p>
+                            <input class="boxes" type="number" id="twenties" name="Twenties">
+                        </div>
+                        <div class="box-labels">
+                            <p>Total:</p>
+                            <input class="boxes" type="text" id="total" name="Total" readonly>
+                        </div>
+                    </div>
+
+                    <div class="to-leave-container to-leave">
+                        <div class="box-labels">
+                            <p>$1: </p>
+                            <input class="boxes" type="text" id="ones-to-leave" readonly>
+                        </div>
+                        <div class="box-labels">
+                            <p>$5: </p>
+                            <input class="boxes" type="text" id="fives-to-leave" readonly>
+                        </div>
+                        <div class="box-labels">
+                            <p>$10: </p>
+                            <input class="boxes" type="text" id="tens-to-leave" readonly>
+                        </div>
+                    </div>
+                    
+                    <section class="form-layout">
+                        <label for="initials">First name</label>
+                        <input type="text" name="Initials" id="initials" required>
             
-            <div>
-                <div class="box-labels">
-                    <p>Nickels</p>
-                    <input class="boxes" type="number" id="nickels" name="Nickels">
-                </div>
-                <div class="box-labels">
-                    <p>Dimes</p>
-                    <input class="boxes" type="number" id="dimes" name="Dimes">
-                </div>
-                <div class="box-labels">
-                    <p>Quarters</p>
-                    <input class="boxes" type="number" id="quarters" name="Quarters">
-                </div>
-                <div class="box-labels">
-                    <p>Dollar Quarters</p>
-                    <input class="boxes" type="number" id="dollar-quarters" name="Dollar_Quarters">
-                </div>
-                <div class="box-labels">
-                    <p>Change:</p>
-                    <input class="boxes" type="text" id="change" name="Change" readonly>
-                </div>
-            </div>
-
-            <div>
-                <div class="box-labels">
-                    <p>$1</p>
-                    <input class="boxes" type="number" id="ones" name="Ones">
-                </div>
-                <div class="box-labels">
-                    <p>$5</p>
-                    <input class="boxes" type="number" id="fives" name="Fives">
-                </div>
-                <div class="box-labels">
-                    <p>$10</p>
-                    <input class="boxes" type="number" id="tens" name="Tens">
-                </div>
-                <div class="box-labels">
-                    <p>$20</p>
-                    <input class="boxes" type="number" id="twenties" name="Twenties">
-                </div>
-                <div class="box-labels">
-                    <p>Total:</p>
-                    <input class="boxes" type="text" id="total" name="Total" readonly>
-                </div>
-            </div>
-
-            <div class="to-leave">
-                <div class="box-labels">
-                    <p>$1: </p>
-                    <input class="boxes" type="text" id="ones-to-leave" readonly>
-                </div>
-                <div class="box-labels">
-                    <p>$5: </p>
-                    <input class="boxes" type="text" id="fives-to-leave" readonly>
-                </div>
-                <div class="box-labels">
-                    <p>$10: </p>
-                    <input class="boxes" type="text" id="tens-to-leave" readonly>
-                </div>
+                        <label for="drinks"># of drinks</label>
+                        <input type="number" name="Drinks" id="drinks" required>
+            
+                        <label for="expected">Expected: $</label>
+                        <input type="number" name="Expected" id="expected" step="0.01" required>
+            
+                        <label class="hidden" for="actual">Actual: $</label>
+                        <input type="number" name="Actual" id="actual" step="0.01">
+            
+                        <label class="hidden" for="variance">Variance: (+/-) $</label>
+                        <input type="number" name="Variance" id="variance" step="0.01" readonly>
+            
+                        <label for="comments">Additional Comments</label>
+                        <textarea name="Comments" id="comments" rows="3"></textarea>
+            
+                        <button type="submit" id="submit">Submit</button>
+                    </section>
+                </form>
+                <span id="msg"></span>
             </div>
         </div>
+    </div>
 
-        <section class="form-layout">
-            <label for="initials">Initials of closer</label>
-            <input type="text" name="Initials" id="initials" required>
-
-            <label for="drinks"># of drinks</label>
-            <input type="number" name="Drinks" id="drinks" required>
-
-            <label for="expected">Expected: $</label>
-            <input type="number" name="Expected" id="expected" step="0.01" required>
-
-            <label class="hidden" for="actual">Actual: $</label>
-            <input type="number" name="Actual" id="actual" step="0.01">
-
-            <label class="hidden" for="variance">Variance: (+/-) $</label>
-            <input type="number" name="Variance" id="variance" step="0.01" readonly>
-
-            <label for="comments">Additional Comments</label>
-            <textarea name="Comments" id="comments" rows="3"></textarea>
-
-            <button type="submit" id="submit">Submit</button>
-        </section>
-    </form>
-    <span id="msg"></span>
+    <div id="confirmation-modal" class="modal-overlay">
+        <div class="glass-container modal-content">
+            <h2>Please confirm data below</h2>
+            <div class="modal-data">
+                <p><strong>First Name:</strong> <span id="confirm-name"></span></p>
+                <p><strong># of Drinks:</strong> <span id="confirm-drinks"></span></p>
+                <p><strong>Expected:</strong> $<span id="confirm-expected"></span></p>
+                <p><strong>Actual:</strong> $<span id="confirm-actual"></span></p>
+                <p><strong>Variance:</strong> $<span id="confirm-variance"></span></p>
+                <p><strong>Comments:</strong> <span id="confirm-comments"></span></p>
+            </div>
+            <div class="modal-buttons">
+                <button type="button" id="edit-btn">Edit</button>
+                <button type="button" id="confirm-submit-btn">Submit</button>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js" defer></script>
     <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbysafcTkjaKY5NZCPys7bvfD6gsWGS6rpb4wVTmyQJ-wyqe_w8K48KMBRkQprjDkogb1g/exec'
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxA6oc2saEMbLielR8RJNANPxQS9r8Fr6S1ymsZxMe1CTH7VSC9cWWepUKupJJ3iBt_bw/exec'
         const form = document.forms['submit-to-google-sheet']
         const msg = document.getElementById("msg");
-    
+        
+        const modal = document.getElementById("confirmation-modal");
+        const editBtn = document.getElementById("edit-btn");
+        const confirmSubmitBtn = document.getElementById("confirm-submit-btn");
+
         form.addEventListener('submit', e => {
-            e.preventDefault()
+            e.preventDefault();
+            
+            document.getElementById("confirm-name").innerText = document.getElementById("initials").value;
+            document.getElementById("confirm-drinks").innerText = document.getElementById("drinks").value;
+            document.getElementById("confirm-expected").innerText = document.getElementById("expected").value;
+            document.getElementById("confirm-actual").innerText = document.getElementById("actual").value || "0.00";
+            document.getElementById("confirm-variance").innerText = document.getElementById("variance").value || "0.00";
+
+            let commentsVal = document.getElementById("comments").value.trim();
+            document.getElementById("confirm-comments").innerText = commentsVal ? commentsVal : "NA";
+            
+            modal.style.display = "flex";
+        });
+
+        editBtn.addEventListener('click', () => {
+            modal.style.display = "none";
+        });
+
+        confirmSubmitBtn.addEventListener('click', () => {
+            modal.style.display = "none";
+            msg.innerHTML = "Sending...";
+            
             fetch(scriptURL, { method: 'POST', body: new FormData(form)})
                 .then(response => {
                     msg.innerHTML = "Information sent!"
                     setTimeout(function() {
                         msg.innerHTML = ""
-                    },5000)
+                    }, 5000)
                     form.reset()
                 })
-                .catch(error => console.error('Error!', error.message))
-        })
+                .catch(error => {
+                    console.error('Error!', error.message)
+                    msg.innerHTML = "Error sending data."
+                });
+        });
       </script>
 </body>
 </html>
